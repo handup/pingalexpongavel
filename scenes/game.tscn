@@ -2,7 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://cutgqno2h0ng3" path="res://scenes/player.tscn" id="1_uwrxv"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1lldk"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+normal = Vector2(0, 1)
+
 [node name="Game" type="Node2D" unique_id=1186145034]
 
 [node name="Player" parent="." unique_id=1085302709 instance=ExtResource("1_uwrxv")]
-position = Vector2(617, 325)
+position = Vector2(8, 303)
+
+[node name="LowerBorder" type="StaticBody2D" parent="." unique_id=1514704278]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerBorder" unique_id=186609344]
+position = Vector2(22, 648)
+shape = SubResource("WorldBoundaryShape2D_1lldk")
+
+[node name="HigherBorder" type="StaticBody2D" parent="." unique_id=757299169]
+position = Vector2(14, -198)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HigherBorder" unique_id=1743621721]
+position = Vector2(10, 198)
+shape = SubResource("WorldBoundaryShape2D_uwrxv")

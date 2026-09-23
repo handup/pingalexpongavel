@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://q307vfwr0g8a"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4miue"]
+distance = -648.0
+
+[node name="Arena" type="Node2D" unique_id=1541047057]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1110760846]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1409698780]
+position = Vector2(88, 1)
+shape = SubResource("WorldBoundaryShape2D_4miue")
