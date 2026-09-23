@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cutgqno2h0ng3"]
 
+[ext_resource type="Script" uid="uid://b07exxq0c11gl" path="res://scenes/character_body_2d.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://14g4wm50psln" path="res://assets/Player.png" id="1_wtcfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4miue"]
@@ -8,6 +9,7 @@ size = Vector2(17, 119.5)
 [node name="Player" type="Node2D" unique_id=1085302709]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=681391269]
+script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=726938356]
 position = Vector2(1, 0)
