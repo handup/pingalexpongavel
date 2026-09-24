@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	velocity.y = 15
-	velocity.x = 150
+	velocity.y = -1 * 400
+	velocity.x = -1 * 400
 	pass # Replace with function body.
 
 

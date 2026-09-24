@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cauoqporug0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xu7wj"]
+size = Vector2(864, 553.5)
+
+[sub_resource type="CurveTexture" id="CurveTexture_xu7wj"]
+
+[node name="Area2D" type="Area2D" unique_id=476437866]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1139563787]
+position = Vector2(434, 278.25)
+shape = SubResource("RectangleShape2D_xu7wj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1678126989]
+texture = SubResource("CurveTexture_xu7wj")

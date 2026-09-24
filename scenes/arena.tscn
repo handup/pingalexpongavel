@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://q307vfwr0g8a"]
 
+[ext_resource type="Script" uid="uid://34c5b8hv27jb" path="res://scenes/goooooooool_right.gd" id="1_e05a3"]
+[ext_resource type="Script" uid="uid://dv6kj4f6d1uv" path="res://scenes/goooooooool_left.gd" id="1_wl4x5"]
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1lldk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
 normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xu7wj"]
+normal = Vector2(1, 0)
+distance = -0.8853687
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ug7gw"]
+normal = Vector2(-1, 0)
+distance = 1.0
 
 [node name="Arena" type="Node2D" unique_id=1076363587]
 
@@ -19,3 +30,22 @@ position = Vector2(14, -198)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HigherBorder" unique_id=546941802]
 position = Vector2(10, 198)
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="GOOOOOOOOOL_Left" type="Area2D" parent="." unique_id=827710140]
+position = Vector2(1, 253)
+script = ExtResource("1_wl4x5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GOOOOOOOOOL_Left" unique_id=1179415306]
+position = Vector2(0, 3)
+shape = SubResource("WorldBoundaryShape2D_xu7wj")
+
+[node name="GOOOOOOOOOL_Right" type="Area2D" parent="." unique_id=1728385195]
+position = Vector2(1154, 314)
+script = ExtResource("1_e05a3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GOOOOOOOOOL_Right" unique_id=506444601]
+position = Vector2(0, 3)
+shape = SubResource("WorldBoundaryShape2D_ug7gw")
+
+[connection signal="body_entered" from="GOOOOOOOOOL_Left" to="GOOOOOOOOOL_Left" method="_on_body_entered"]
+[connection signal="body_entered" from="GOOOOOOOOOL_Right" to="GOOOOOOOOOL_Right" method="_on_body_entered"]
