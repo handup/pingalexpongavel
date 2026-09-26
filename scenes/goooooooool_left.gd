@@ -15,10 +15,5 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if(body.name == "Ball"):
 		arbitru_.increaseEnemyScore()
-		timer.start()
+		BALL.respawn()
 		
-
-
-func _on_timer_timeout() -> void:
-	timer.stop()
-	BALL.respawn()

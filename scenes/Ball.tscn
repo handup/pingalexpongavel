@@ -18,8 +18,13 @@ texture = ExtResource("1_d73vv")
 shape = SubResource("CircleShape2D_g2els")
 
 [node name="Trail" type="Sprite2D" parent="." unique_id=1413010765]
+visible = false
 position = Vector2(0.015138625, -0.016994473)
 rotation = -5.4942966
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("3_ul5l2")
 offset = Vector2(-22.020576, 20.856873)
+
+[node name="RespawnTimer" type="Timer" parent="." unique_id=618902297]
+
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_timer_timeout"]
