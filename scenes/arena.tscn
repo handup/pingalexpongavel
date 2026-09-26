@@ -49,5 +49,8 @@ script = ExtResource("1_e05a3")
 position = Vector2(0, 3)
 shape = SubResource("WorldBoundaryShape2D_ug7gw")
 
+[node name="Timer" type="Timer" parent="." unique_id=1051392063]
+
 [connection signal="body_entered" from="GOOOOOOOOOL_Left" to="GOOOOOOOOOL_Left" method="_on_body_entered"]
 [connection signal="body_entered" from="GOOOOOOOOOL_Right" to="GOOOOOOOOOL_Right" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="GOOOOOOOOOL_Left" method="_on_timer_timeout"]
