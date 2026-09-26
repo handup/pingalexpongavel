@@ -12,7 +12,7 @@ func respawn():
 	velocity.y = 0
 	velocity.x = 0
 	trail.visible = false
-	position = Vector2(567.0, 323.5)
+	position = Vector2(562.0, 323.5)
 	timer.start()
 	
 func _ready() -> void:
