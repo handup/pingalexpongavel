@@ -1,15 +1,17 @@
 extends CharacterBody2D
 
+const SPEED = 500
+
 func respawn():
-	position = Vector2(526.0, 323.5)
-	velocity.y = -1 * 400
-	velocity.x = -1 * 400
+	position = Vector2(567.0, 323.5)
+	velocity.y = -1 * SPEED
+	velocity.x = -1 * SPEED
 	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	velocity.y = -1 * 400
-	velocity.x = -1 * 400
+	velocity.y = -1 * SPEED
+	velocity.x = -1 * SPEED
 	print(position)
 	pass # Replace with function body.
 

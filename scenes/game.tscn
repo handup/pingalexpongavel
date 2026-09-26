@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bhu5yr56gsy0f" path="res://scenes/Ball.tscn" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://dtmwygvya045t" path="res://scenes/arbitru'.gd" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://t3dg106v41h" path="res://scenes/player2.tscn" id="5_iywne"]
+[ext_resource type="Texture2D" uid="uid://b6w5ep2ef3h4k" path="res://assets/Board.png" id="6_p57ef"]
 
 [node name="Game" type="Node2D" unique_id=1186145034]
 
@@ -13,26 +14,41 @@ position = Vector2(9, 323.5)
 
 [node name="Arena" parent="." unique_id=1076363587 instance=ExtResource("2_lnu2h")]
 
-[node name="Ball_Rigid" parent="." unique_id=1392445141 instance=ExtResource("3_lbhrr")]
-position = Vector2(526, 323.5)
+[node name="Ball" parent="." unique_id=1392445141 instance=ExtResource("3_lbhrr")]
+position = Vector2(562, 323.5)
+collision_layer = 2
 
 [node name="Arbitru\'" type="Node2D" parent="." unique_id=2086508367]
 unique_name_in_owner = true
 script = ExtResource("4_lbhrr")
 
 [node name="Player_Score" type="Label" parent="Arbitru\'" unique_id=1212345581]
-offset_left = 79.0
-offset_top = 25.0
-offset_right = 160.0
-offset_bottom = 75.0
-theme_override_font_sizes/font_size = 30
+offset_left = 482.0
+offset_top = 45.0
+offset_right = 563.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 40
+text = "0"
 
 [node name="Enemy_Score" type="Label" parent="Arbitru\'" unique_id=78539596]
-offset_left = 837.0
-offset_top = 36.0
-offset_right = 1056.0
-offset_bottom = 122.0
-theme_override_font_sizes/font_size = 30
+offset_left = 562.0
+offset_top = 45.0
+offset_right = 643.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 2
 
 [node name="Player2" parent="." unique_id=787477257 instance=ExtResource("5_iywne")]
-position = Vector2(1142, 323.5)
+position = Vector2(1116, 323.5)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=234086355]
+z_index = -1
+offset_left = -14.0
+offset_top = -1.0
+offset_right = 1138.0
+offset_bottom = 647.0
+texture = ExtResource("6_p57ef")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=501123144]
+position = Vector2(562, 323)

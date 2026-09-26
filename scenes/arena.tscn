@@ -32,7 +32,8 @@ position = Vector2(10, 198)
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
 
 [node name="GOOOOOOOOOL_Left" type="Area2D" parent="." unique_id=827710140]
-position = Vector2(1, 253)
+position = Vector2(-14, 253)
+collision_mask = 2
 script = ExtResource("1_wl4x5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GOOOOOOOOOL_Left" unique_id=1179415306]
@@ -40,7 +41,8 @@ position = Vector2(0, 3)
 shape = SubResource("WorldBoundaryShape2D_xu7wj")
 
 [node name="GOOOOOOOOOL_Right" type="Area2D" parent="." unique_id=1728385195]
-position = Vector2(1154, 314)
+position = Vector2(1138, 314)
+collision_mask = 2
 script = ExtResource("1_e05a3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GOOOOOOOOOL_Right" unique_id=506444601]

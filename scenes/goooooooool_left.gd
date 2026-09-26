@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var arbitru_: Node2D = $"../../Arbitru'"
-@onready var BALL: CharacterBody2D = $"../../Ball_Rigid"
+@onready var BALL: CharacterBody2D = $"../../Ball"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,5 +13,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	arbitru_.increaseEnemyScore()
-	BALL.respawn()
+	if(body.name == "Ball"):
+		arbitru_.increaseEnemyScore()
+		BALL.respawn()
