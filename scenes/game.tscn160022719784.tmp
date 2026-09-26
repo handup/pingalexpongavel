@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cayps8rjv2oir"]
+
+[ext_resource type="PackedScene" uid="uid://cutgqno2h0ng3" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://q307vfwr0g8a" path="res://scenes/arena.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bhu5yr56gsy0f" path="res://scenes/Ball.tscn" id="3_lbhrr"]
+[ext_resource type="Script" uid="uid://dtmwygvya045t" path="res://scenes/arbitru'.gd" id="4_lbhrr"]
+
+[node name="Game" type="Node2D" unique_id=1186145034]
+
+[node name="Player" parent="." unique_id=1085302709 instance=ExtResource("1_uwrxv")]
+position = Vector2(8, 303)
+
+[node name="Arena" parent="." unique_id=1076363587 instance=ExtResource("2_lnu2h")]
+
+[node name="Ball_Rigid" parent="." unique_id=1392445141 instance=ExtResource("3_lbhrr")]
+position = Vector2(526, 295)
+
+[node name="Arbitru\'" type="Node2D" parent="." unique_id=2086508367]
+unique_name_in_owner = true
+script = ExtResource("4_lbhrr")
+
+[node name="Player_Score" type="Label" parent="Arbitru\'" unique_id=1212345581]
+offset_left = 79.0
+offset_top = 25.0
+offset_right = 160.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 30
+
+[node name="Enemy_Score" type="Label" parent="Arbitru\'" unique_id=78539596]
+offset_left = 837.0
+offset_top = 36.0
+offset_right = 1056.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 30

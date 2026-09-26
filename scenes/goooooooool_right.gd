@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var arbitru_: Node2D = $"../../Arbitru'"
-const BALL = preload("uid://bhu5yr56gsy0f")
+@onready var BALL: CharacterBody2D = $"../../Ball_Rigid"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,9 +12,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	# ball disappear
-	body.queue_free()
 	arbitru_.increasePlayerScore()
-	# restart level
-	BALL.reset_state()
-	pass # Replace with function body.
+	BALL.respawn()
