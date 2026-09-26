@@ -24,13 +24,16 @@ func _physics_process(delta):
 		var collider = collision.get_collider()
 		bounces += 1
 		velocity = velocity.bounce(collision.get_normal())
-		if bounces < 10:
-			velocity *= 1.1
+		if bounces < 20:
+			velocity *= 1.05
 		
 		if collider.name == "CharacterBody2D":
 			if collider.velocity.y * velocity.y < 0:
 				velocity.y *= -1
-			position += velocity.normalized() * 30 # attempt to fix buggy behaviour when hitting the ball with the top or bottom of the paddle
+				velocity *= 0.85
+			else:
+				velocity *= 1.25
+			position += velocity.normalized() * 20 # attempt to fix buggy behaviour when hitting the ball with the top or bottom of the paddle
 	trail.rotation = velocity.angle() + deg_to_rad(45)
 
 
