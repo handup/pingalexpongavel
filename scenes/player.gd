@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var ball: CharacterBody2D = $"../../Ball"
 
 
 const SPEED = 650.0
