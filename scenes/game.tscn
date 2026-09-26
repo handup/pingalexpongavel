@@ -4,16 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://q307vfwr0g8a" path="res://scenes/arena.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bhu5yr56gsy0f" path="res://scenes/Ball.tscn" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://dtmwygvya045t" path="res://scenes/arbitru'.gd" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://t3dg106v41h" path="res://scenes/player2.tscn" id="5_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1186145034]
 
 [node name="Player" parent="." unique_id=1085302709 instance=ExtResource("1_uwrxv")]
-position = Vector2(8, 303)
+position = Vector2(9, 323.5)
 
 [node name="Arena" parent="." unique_id=1076363587 instance=ExtResource("2_lnu2h")]
 
 [node name="Ball_Rigid" parent="." unique_id=1392445141 instance=ExtResource("3_lbhrr")]
-position = Vector2(526, 295)
+position = Vector2(526, 323.5)
 
 [node name="Arbitru\'" type="Node2D" parent="." unique_id=2086508367]
 unique_name_in_owner = true
@@ -32,3 +33,6 @@ offset_top = 36.0
 offset_right = 1056.0
 offset_bottom = 122.0
 theme_override_font_sizes/font_size = 30
+
+[node name="Player2" parent="." unique_id=787477257 instance=ExtResource("5_iywne")]
+position = Vector2(1142, 323.5)

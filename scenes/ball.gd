@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 func respawn():
-	position = Vector2(526.0, 295.0)
+	position = Vector2(526.0, 323.5)
 	velocity.y = -1 * 400
 	velocity.x = -1 * 400
 	pass

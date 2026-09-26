@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cnd2oaffpd7ak"]
+
+[ext_resource type="Texture2D" uid="uid://1ns4dlqvqq6m" path="res://assets/Computer.png" id="1_amo4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4miue"]
+size = Vector2(17, 120)
+
+[node name="Player2" type="CharacterBody2D" unique_id=617299018]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1304594238]
+texture = ExtResource("1_amo4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1156032015]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_4miue")
