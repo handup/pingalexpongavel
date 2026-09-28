@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cbcq23ef3sbes"]
+
+[ext_resource type="Script" uid="uid://cggb5mj3ocvtp" path="res://menu.gd" id="1_037ec"]
+[ext_resource type="PackedScene" uid="uid://buy8l72mmgtlr" path="res://scenes/menu/menu_play.tscn" id="2_037ec"]
+[ext_resource type="Texture2D" uid="uid://b6w5ep2ef3h4k" path="res://assets/Board.png" id="2_y1o0p"]
+[ext_resource type="Texture2D" uid="uid://b3mkaosbetgbx" path="res://icon.svg" id="3_r8yej"]
+
+[sub_resource type="GDScript" id="GDScript_e0arn"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Menu" type="Node2D" unique_id=1777264290]
+script = ExtResource("1_037ec")
+
+[node name="Menu_play" parent="." unique_id=925857532 instance=ExtResource("2_037ec")]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1399720273]
+z_index = -1
+offset_left = -14.0
+offset_top = -1.0
+offset_right = 1138.0
+offset_bottom = 647.0
+texture = ExtResource("2_y1o0p")
+
+[node name="Play" type="Button" parent="TextureRect" unique_id=474411677]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 151.0
+offset_right = 673.0
+offset_bottom = 287.0
+text = "Play"
+icon = ExtResource("3_r8yej")
+script = SubResource("GDScript_e0arn")
+
+[node name="Settings" type="Button" parent="TextureRect" unique_id=33466814]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 296.0
+offset_right = 687.0
+offset_bottom = 432.0
+text = "Settings"
+icon = ExtResource("3_r8yej")
+
+[node name="Quit" type="Button" parent="TextureRect" unique_id=833608742]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 444.0
+offset_right = 686.0
+offset_bottom = 580.0
+text = "Quit"
+icon = ExtResource("3_r8yej")
+
+[node name="Title" type="Label" parent="TextureRect" unique_id=1778547716]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 55.0
+offset_right = 618.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 30
+text = "PONG"
+
+[connection signal="pressed" from="TextureRect/Play" to="." method="_on_play_pressed"]

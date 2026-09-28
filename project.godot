@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Ping-alex-ong"
-run/main_scene="uid://cayps8rjv2oir"
+run/main_scene="uid://b2xl2okgcg5yb"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameModeManager="*uid://b51gquutdi7wp"
+Globals="*uid://curnugrrcgvxf"
 
 [display]
 

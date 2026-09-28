@@ -3,19 +3,22 @@ extends CharacterBody2D
 @onready var player_1: Node2D = $"../Player"
 @onready var player_2: CharacterBody2D = $"../Player2"
 @onready var timer: Timer = $RespawnTimer
+@onready var texture_rect: TextureRect = $"../TextureRect"
 
 const SPEED = 700
 var bounces = 0 # maybe todo increase sound effect pitch and ball color too
+const CENTER_COORDS = Vector2(562.0, 323.5)
 
 func respawn():
 	bounces = 0
 	velocity.y = 0
 	velocity.x = 0
 	trail.visible = false
-	position = Vector2(562.0, 323.5)
+	position = CENTER_COORDS # get by texture_rect.position
 	timer.start()
 	
 func _ready() -> void:
+	print(texture_rect.position)
 	timer.start()
 
 func _physics_process(delta):

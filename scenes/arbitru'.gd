@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var player_score: Label = $Player_Score
 @onready var enemy_score: Label = $Enemy_Score
+@onready var player_2: CharacterBody2D = $"../Player2"
+const GAME_MODE_MANAGER = preload("uid://b2xl2okgcg5yb")
 
 var Player_score = 0
 var Enemy_score = 0
@@ -23,3 +25,4 @@ func increaseEnemyScore():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	

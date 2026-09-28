@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dcvbg332taji0"]
+
+[ext_resource type="Script" uid="uid://dtmwygvya045t" path="res://scenes/arbitru'.gd" id="1_htmg0"]
+
+[node name="Arbitru\'" type="Node2D" unique_id=1493378622]
+script = ExtResource("1_htmg0")
+
+[node name="Player_Score" type="Label" parent="." unique_id=788063735]
+offset_left = 482.0
+offset_top = 45.0
+offset_right = 563.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="Enemy_Score" type="Label" parent="." unique_id=894981582]
+offset_left = 562.0
+offset_top = 45.0
+offset_right = 643.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 2

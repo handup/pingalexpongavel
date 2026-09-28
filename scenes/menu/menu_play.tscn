@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://buy8l72mmgtlr"]
+
+[ext_resource type="Script" uid="uid://8o40txxw68ii" path="res://scenes/menu/menu_play.gd" id="1_80fss"]
+[ext_resource type="Texture2D" uid="uid://b6w5ep2ef3h4k" path="res://assets/Board.png" id="1_p6hnj"]
+[ext_resource type="Texture2D" uid="uid://b3mkaosbetgbx" path="res://icon.svg" id="2_v8v1b"]
+
+[node name="Menu_play" type="Node2D" unique_id=1777264290]
+script = ExtResource("1_80fss")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1399720273]
+z_index = -1
+offset_left = -14.0
+offset_top = -1.0
+offset_right = 1138.0
+offset_bottom = 647.0
+texture = ExtResource("1_p6hnj")
+
+[node name="LocalVs" type="Button" parent="TextureRect" unique_id=474411677]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 152.0
+offset_right = 677.0
+offset_bottom = 288.0
+text = "Local VS"
+icon = ExtResource("2_v8v1b")
+
+[node name="AIVs" type="Button" parent="TextureRect" unique_id=33466814]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 294.0
+offset_right = 714.0
+offset_bottom = 430.0
+text = "Clanker Smacker"
+icon = ExtResource("2_v8v1b")
+
+[node name="Back" type="Button" parent="TextureRect" unique_id=833608742]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 444.0
+offset_right = 678.0
+offset_bottom = 580.0
+text = "Back"
+icon = ExtResource("2_v8v1b")
+
+[node name="Title" type="Label" parent="TextureRect" unique_id=1778547716]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 55.0
+offset_right = 618.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 30
+text = "PONG"
+
+[connection signal="pressed" from="TextureRect/LocalVs" to="." method="_on_local_vs_pressed"]
+[connection signal="pressed" from="TextureRect/AIVs" to="." method="_on_ai_vs_pressed"]
+[connection signal="pressed" from="TextureRect/Back" to="." method="_on_back_pressed"]
