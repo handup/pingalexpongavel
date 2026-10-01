@@ -5,6 +5,7 @@ extends Node2D
 @onready var player_2: CharacterBody2D = $"../Pausable/Player2"
 const GAME_MODE_MANAGER = preload("uid://b2xl2okgcg5yb")
 @onready var pausable: Node2D = $"../Pausable"
+@onready var go_menu: Button = $"../GoMenu"
 
 var Player_score = 0
 var Enemy_score = 0
@@ -26,9 +27,13 @@ func increaseEnemyScore():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Escape"):
-		print(pausable.get_tree().paused)
-		if pausable.get_tree().paused:
-			pausable.get_tree().paused = false
-		if !pausable.get_tree().paused:
-			pausable.get_tree().paused = true
-	
+		get_tree().paused = !get_tree().paused
+		if get_tree().paused:
+			go_menu.show()
+		else:
+			go_menu.hide()
+
+
+func _on_go_menu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/menu/menu.tscn")

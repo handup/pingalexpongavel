@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://t3dg106v41h" path="res://scenes/player2.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://b6w5ep2ef3h4k" path="res://assets/Board.png" id="6_p57ef"]
 [ext_resource type="AudioStream" uid="uid://b7xw07g4rp3o8" path="res://blood_moon.ogg" id="7_u5sy4"]
+[ext_resource type="Script" uid="uid://ctd3jseqeqcwk" path="res://scenes/go_menu.gd" id="8_gee14"]
 
 [node name="Game" type="Node2D" unique_id=1186145034]
 
@@ -30,10 +31,7 @@ stream = ExtResource("7_u5sy4")
 volume_db = -11.127
 autoplay = true
 
-[node name="Popup" type="Popup" parent="." unique_id=1355542661]
-
 [node name="Pausable" type="Node2D" parent="." unique_id=965620485]
-process_mode = 1
 
 [node name="Player" parent="Pausable" unique_id=1085302709 instance=ExtResource("1_uwrxv")]
 z_index = 3
@@ -47,3 +45,13 @@ collision_layer = 2
 position = Vector2(1116, 323.5)
 
 [node name="Arena" parent="Pausable" unique_id=1076363587 instance=ExtResource("2_lnu2h")]
+
+[node name="GoMenu" type="Button" parent="." unique_id=594090532]
+process_mode = 2
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Go Menu"
+script = ExtResource("8_gee14")
+
+[connection signal="pressed" from="GoMenu" to="Arbitru\'" method="_on_go_menu_pressed"]
