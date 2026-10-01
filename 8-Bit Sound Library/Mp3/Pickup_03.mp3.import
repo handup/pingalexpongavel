@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3dky8yjqtcdf"
+path="res://.godot/imported/Pickup_03.mp3-ebd17cd4b7808209534ea096717c3ecb.mp3str"
+
+[deps]
+
+source_file="res://8-Bit Sound Library/Mp3/Pickup_03.mp3"
+dest_files=["res://.godot/imported/Pickup_03.mp3-ebd17cd4b7808209534ea096717c3ecb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

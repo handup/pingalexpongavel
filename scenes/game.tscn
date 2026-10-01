@@ -6,24 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://dcvbg332taji0" path="res://scenes/arbitru'.tscn" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://t3dg106v41h" path="res://scenes/player2.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://b6w5ep2ef3h4k" path="res://assets/Board.png" id="6_p57ef"]
+[ext_resource type="AudioStream" uid="uid://b7xw07g4rp3o8" path="res://blood_moon.ogg" id="7_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=1186145034]
 
-[node name="Player2" parent="." unique_id=787477257 instance=ExtResource("5_iywne")]
-position = Vector2(1116, 323.5)
-
-[node name="Ball" parent="." unique_id=1392445141 instance=ExtResource("3_lbhrr")]
-position = Vector2(562, 323.5)
-collision_layer = 2
-
-[node name="Player" parent="." unique_id=1085302709 instance=ExtResource("1_uwrxv")]
-z_index = 3
-position = Vector2(9, 323.5)
-
-[node name="Arena" parent="." unique_id=1076363587 instance=ExtResource("2_lnu2h")]
-
 [node name="Arbitru\'" parent="." unique_id=1493378622 instance=ExtResource("4_p57ef")]
 unique_name_in_owner = true
+process_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=234086355]
 z_index = -1
@@ -35,3 +24,26 @@ texture = ExtResource("6_p57ef")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=501123144]
 position = Vector2(562, 323)
+
+[node name="BackgroundMuzak" type="AudioStreamPlayer2D" parent="." unique_id=1934594979]
+stream = ExtResource("7_u5sy4")
+volume_db = -11.127
+autoplay = true
+
+[node name="Popup" type="Popup" parent="." unique_id=1355542661]
+
+[node name="Pausable" type="Node2D" parent="." unique_id=965620485]
+process_mode = 1
+
+[node name="Player" parent="Pausable" unique_id=1085302709 instance=ExtResource("1_uwrxv")]
+z_index = 3
+position = Vector2(9, 323.5)
+
+[node name="Ball" parent="Pausable" unique_id=1392445141 instance=ExtResource("3_lbhrr")]
+position = Vector2(562, 323.5)
+collision_layer = 2
+
+[node name="Player2" parent="Pausable" unique_id=787477257 instance=ExtResource("5_iywne")]
+position = Vector2(1116, 323.5)
+
+[node name="Arena" parent="Pausable" unique_id=1076363587 instance=ExtResource("2_lnu2h")]

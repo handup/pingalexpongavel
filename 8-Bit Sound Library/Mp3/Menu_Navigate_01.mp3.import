@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgb4bqtph5dqe"
+path="res://.godot/imported/Menu_Navigate_01.mp3-f30a3c8637f7efbead7e2a5c36ee030a.mp3str"
+
+[deps]
+
+source_file="res://8-Bit Sound Library/Mp3/Menu_Navigate_01.mp3"
+dest_files=["res://.godot/imported/Menu_Navigate_01.mp3-f30a3c8637f7efbead7e2a5c36ee030a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

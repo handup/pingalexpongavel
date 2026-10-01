@@ -3,7 +3,9 @@ extends CharacterBody2D
 @onready var player_1: Node2D = $"../Player"
 @onready var player_2: CharacterBody2D = $"../Player2"
 @onready var timer: Timer = $RespawnTimer
-@onready var texture_rect: TextureRect = $"../TextureRect"
+@onready var texture_rect: TextureRect = $"../../TextureRect"
+@onready var sound_effect: AudioStreamPlayer2D = $SoundEffect
+@onready var background_muzak: AudioStreamPlayer2D = $"../../BackgroundMuzak"
 
 const SPEED = 700
 var bounces = 0 # maybe todo increase sound effect pitch and ball color too
@@ -16,6 +18,7 @@ func respawn():
 	trail.visible = false
 	position = CENTER_COORDS # get by texture_rect.position
 	timer.start()
+	background_muzak.pitch_scale = 1
 	
 func _ready() -> void:
 	print(texture_rect.position)
@@ -24,8 +27,10 @@ func _ready() -> void:
 func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
+		sound_effect.play(0)
 		var collider = collision.get_collider()
 		bounces += 1
+		background_muzak.pitch_scale *= 1.01
 		velocity = velocity.bounce(collision.get_normal())
 		if bounces < 20:
 			velocity *= 1.05

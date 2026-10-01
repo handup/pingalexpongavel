@@ -2,8 +2,9 @@ extends Node2D
 
 @onready var player_score: Label = $Player_Score
 @onready var enemy_score: Label = $Enemy_Score
-@onready var player_2: CharacterBody2D = $"../Player2"
+@onready var player_2: CharacterBody2D = $"../Pausable/Player2"
 const GAME_MODE_MANAGER = preload("uid://b2xl2okgcg5yb")
+@onready var pausable: Node2D = $"../Pausable"
 
 var Player_score = 0
 var Enemy_score = 0
@@ -24,5 +25,10 @@ func increaseEnemyScore():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("Escape"):
+		print(pausable.get_tree().paused)
+		if pausable.get_tree().paused:
+			pausable.get_tree().paused = false
+		if !pausable.get_tree().paused:
+			pausable.get_tree().paused = true
 	
