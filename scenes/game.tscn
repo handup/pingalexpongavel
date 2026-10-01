@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dcvbg332taji0" path="res://scenes/arbitru'.tscn" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://t3dg106v41h" path="res://scenes/player2.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://b6w5ep2ef3h4k" path="res://assets/Board.png" id="6_p57ef"]
-[ext_resource type="AudioStream" uid="uid://b7xw07g4rp3o8" path="res://blood_moon.ogg" id="7_u5sy4"]
+[ext_resource type="AudioStream" uid="uid://b7xw07g4rp3o8" path="res://assets/blood_moon.ogg" id="7_u5sy4"]
 [ext_resource type="Script" uid="uid://ctd3jseqeqcwk" path="res://scenes/go_menu.gd" id="8_gee14"]
 
 [node name="Game" type="Node2D" unique_id=1186145034]

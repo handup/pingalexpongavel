@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://34c5b8hv27jb" path="res://scenes/goooooooool_right.gd" id="1_e05a3"]
 [ext_resource type="Script" uid="uid://dv6kj4f6d1uv" path="res://scenes/goooooooool_left.gd" id="1_wl4x5"]
-[ext_resource type="AudioStream" uid="uid://ck7ky347c80ok" path="res://8-Bit Sound Library/Wav/Shoot_01.wav" id="2_olpmc"]
-[ext_resource type="AudioStream" uid="uid://b8bbp6jasyry" path="res://8-Bit Sound Library/Wav/Shoot_03.wav" id="4_xdvfk"]
+[ext_resource type="AudioStream" uid="uid://ck7ky347c80ok" path="res://assets/Shoot_01.wav" id="2_olpmc"]
+[ext_resource type="AudioStream" uid="uid://b8bbp6jasyry" path="res://assets/Shoot_03.wav" id="4_xdvfk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1lldk"]
 
